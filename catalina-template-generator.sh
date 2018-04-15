@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #
 # This is catalina template generator
 #
@@ -55,8 +54,8 @@ fi
 echo "Name: ${APP_NAME}"
 echo "CATALINA_HOME: ${CATALINA_HOME}"
 echo "CATALINA_BASE: ${CATALINA_BASE}"
-
-APP_CATALINA_BASE=${CATALINA_BASE}/${APP_NAME}/catalina_base
+APP_BASE=${CATALINA_BASE}/${APP_NAME}
+APP_CATALINA_BASE=${APP_BASE}/catalina_base
 
 #
 # Check the target base directory exists
@@ -86,16 +85,16 @@ cp ${CATALINA_HOME}/conf/server.xml ${APP_CATALINA_BASE}/conf
 cp ${CATALINA_HOME}/conf/web.xml ${APP_CATALINA_BASE}/conf
 
 echo "Create start.sh."
-cp ./templates/start.sh ${APP_CATALINA_BASE}
+cp ./templates/start.sh ${APP_BASE}
 
 echo "Create halt.sh."
-cp ./templates/halt.sh ${APP_CATALINA_BASE}
+cp ./templates/halt.sh ${APP_BASE}
 
 echo "Create restart.sh."
-cp ./templates/restart.sh ${APP_CATALINA_BASE}
+cp ./templates/restart.sh ${APP_BASE}
 
 echo "Create app.env file."
-cat <<EOT > ${APP_CATALINA_BASE}/app.env
+cat <<EOT > ${APP_BASE}/app.env
 ### app name
 export APP_NAME=${APP_NAME}
 

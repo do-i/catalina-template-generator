@@ -24,9 +24,9 @@ Run `catalina-template-generator.sh` with following switches.
 Example:
 
 ```sh
-NAME=my_web
-CATALINA_HOME=/opt/tomcat/apache-tomcat-8.5.8
-BASE_DIR=~/web
+NAME=my_web \
+CATALINA_HOME=/opt/tomcat/apache-tomcat-8.5.8 \
+BASE_DIR=~/web && \
 ./catalina-template-generator.sh -b ${BASE_DIR} -c ${CATALINA_HOME} -n ${NAME}
 ```
 
@@ -39,8 +39,8 @@ Run `webapp-template-generator.sh` with following switches
 - -n application name
 
 ```sh
-NAME=my_web
-WORKSPACE=~/workspace
-GROUP_ID=com.djd.fun
+NAME=my_web \
+WORKSPACE=~/workspace \
+GROUP_ID=com.djd.fun && \
 ./webapp-template-generator.sh -w ${WORKSPACE} -n ${NAME} -g ${GROUP_ID}
 ```
