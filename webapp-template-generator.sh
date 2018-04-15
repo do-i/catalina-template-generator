@@ -60,6 +60,9 @@ SCRIPT_DIR=${APP_WORKSPACE}/scripts
 mkdir -p ${SCRIPT_DIR}
 
 cat <<EOT > ${SCRIPT_DIR}/app.env
+### app name
+export APP_NAME=${APP_NAME}
+
 ### web app instance base dir
 export CATALINA_BASE=${APP_CATALINA_BASE}
 EOT
