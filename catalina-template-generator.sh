@@ -93,6 +93,9 @@ cp ./templates/halt.sh ${APP_BASE}
 echo "Create restart.sh."
 cp ./templates/restart.sh ${APP_BASE}
 
+echo "Create logtc."
+cp ./templates/logtc ${APP_BASE}
+
 echo "Create app.env file."
 cat <<EOT > ${APP_BASE}/app.env
 ### app name
